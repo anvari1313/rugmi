@@ -9,8 +9,14 @@
     <a class="item">
       Friends
     </a>
+
     <div class="right menu">
-      <a class="ui item" @click="login">
+      <div v-if="isLoggedIn" class="horizontal">
+        <a class="ui item" @click="login">Gallery</a>
+        <a class="ui item" @click="login">Upload</a>
+        <a class="ui item" @click="logout">Logout</a>
+      </div>
+      <a v-else class="ui item" @click="login">
         Login
       </a>
     </div>
@@ -18,10 +24,18 @@
 </template>
 
 <script>
-import { mapActions } from 'vuex';
+import { mapActions, mapGetters } from 'vuex';
 
 export default {
   name: 'AppHeader',
-  methods: mapActions(['login'])
+  computed: mapGetters(['isLoggedIn']),
+  methods: mapActions(['login', 'logout'])
 }
 </script>
+
+<style scoped>
+.horizontal {
+  display: flex;
+  flex-direction: row;
+}
+</style>
