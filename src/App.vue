@@ -1,9 +1,15 @@
 <template>
-  <h1>I'm an App</h1>
+  <div>
+    <AppHeader></AppHeader>
+    <router-view></router-view>
+  </div>
 </template>
 
 <script>
+import AppHeader from "@/components/AppHeader";
+
 export default {
-  name: 'App'
+  name: 'App',
+  components: {AppHeader}
 }
 </script>
