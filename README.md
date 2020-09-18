@@ -1,21 +1,28 @@
-# rugmi
+# Rugmi
+
+Rugmi is a simple client for [imgur.com](https://imgur.com/). 
 
 ## Project setup
+
+1. Install dependencies:
+
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+2. Compiles and hot-reloads for development
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+3. Compiles and minifies for production
+
 ```
 npm run build
 ```
 
-### Lints and fixes files
+4. Lints and fixes files
+
 ```
 npm run lint
 ```
